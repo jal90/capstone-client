@@ -1,2 +1,7 @@
 {{hamburger-menu}}
-{{#link-to "application" class="navbar-brand"}}Home{{/link-to}}
+
+{{#if isAuthenticated}}
+{{#link-to "vehicles" class="navbar-brand"}}{{format-user user}}'s Dashboard{{/link-to}}
+{{else}}
+{{#link-to "application" class="navbar-brand"}}Mechanic Mate{{/link-to}}
+{{/if}}
