@@ -49,9 +49,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/<name-of-git-repo>'
+    ENV.rootURL = '/capstone-client'
     ENV.locationType = 'hash'
-    ENV.apiHost = '<deployed api url>'
+    ENV.apiHost = 'https://jal90-capstone-api.herokuapp.com/'
   }
 
   return ENV
