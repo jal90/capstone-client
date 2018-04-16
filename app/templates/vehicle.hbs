@@ -6,7 +6,6 @@
 
 <button {{action 'deleteVehicle' model}}> Delete </button>
 
-{{update-vehicle vehicle=model
-                 updateVehicle='updateVehicle'}}
+{{#link-to "update" model}}Update vehicle {{/link-to}}
 
 {{#link-to "works"}}See vehicle's works{{/link-to}}
