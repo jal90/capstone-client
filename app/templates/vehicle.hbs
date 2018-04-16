@@ -1,17 +1,12 @@
 <div class="text-center">
-  {{log vehicle}}
-<h2>{{model.make}} {{model.model}}</h2>
-<h4>{{model.year}}</h4>
-<h6>{{model.mileage}}</h6>
-
+  <h2>{{model.make}} {{model.model}}</h2>
+  <h4>{{model.year}}</h4>
+  <h6>{{model.mileage}}</h6>
 </div>
+
 <button {{action 'deleteVehicle' model}}> Delete </button>
 
-<form {{action 'updateVehicle' model on='submit'}}>
-  {{input placeholder='make' value=model.make}}
-  {{input placeholder='model' value=model.model}}
-  {{input placeholder='year' value=model.year}}
-  {{input placeholder='mileage' value=model.mileage}}
-  <button type='submit'> Update this vehicle </button>
-</form>
+{{update-vehicle vehicle=model
+                 updateVehicle='updateVehicle'}}
+
 {{#link-to "works"}}See vehicle's works{{/link-to}}
