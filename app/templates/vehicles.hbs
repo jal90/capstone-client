@@ -6,16 +6,8 @@
 <div class="text-center">
 <h2>{{vehicle.make}} {{vehicle.model}}</h2>
 <h4>{{vehicle.year}}</h4>
-<button {{action 'deleteVehicle' vehicle}}> Delete </button>
-
-<form {{action 'updateVehicle' vehicle on='submit'}}>
-  {{input placeholder='make' value=vehicle.make}}
-  {{input placeholder='model' value=vehicle.model}}
-  {{input placeholder='year' value=vehicle.year}}
-  <button type='submit'> Update this vehicle </button>
-</form>
-{{#link-to "works"}}See vehicle's works{{/link-to}}
 </div>
+{{#link-to 'vehicle' vehicle}} See vehicle! {{/link-to}}
 {{/each}}
 
 <div class="text-center">

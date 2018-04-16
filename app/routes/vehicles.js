@@ -15,12 +15,6 @@ export default Route.extend({
     createVehicle (vehicle) {
       this.get('store').createRecord('vehicle', vehicle)
         .save()
-    },
-    updateVehicle (vehicle) {
-      vehicle.save()
-    },
-    deleteVehicle (vehicle) {
-      vehicle.destroyRecord()
     }
   }
 })
