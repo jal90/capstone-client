@@ -4,7 +4,8 @@ export default Component.extend({
   vehicle: {
     make: '',
     model: '',
-    year: ''
+    year: '',
+    mileage: ''
   },
 
   actions: {
