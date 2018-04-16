@@ -1,7 +1,7 @@
 <form {{action 'updateVehicle' vehicle on='submit'}}>
-  {{input placeholder='make' value=vehicle.make}}
-  {{input placeholder='model' value=vehicle.model}}
-  {{input placeholder='year' value=vehicle.year}}
-  {{input placeholder='mileage' value=vehicle.mileage}}
+  Make: {{input placeholder='make' value=vehicle.make class=inline}}<br>
+  Model: {{input placeholder='model' value=vehicle.model}}<br>
+  Year: {{input placeholder='year' value=vehicle.year}}<br>
+  Mileage: {{input placeholder='mileage' value=vehicle.mileage}}<br>
   <button type='submit'> Update this vehicle </button>
 </form>
