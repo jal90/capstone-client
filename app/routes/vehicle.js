@@ -9,6 +9,7 @@ export default Route.extend({
     deleteVehicle (vehicle) {
       vehicle.destroyRecord()
         .then(() => this.transitionTo('vehicles'))
+        .then(() => this.toast.warning('Deleted Vehicle'))
     }
   }
 })

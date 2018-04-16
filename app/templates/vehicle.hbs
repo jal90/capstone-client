@@ -2,11 +2,11 @@
   <h2>{{model.make}} {{model.model}}</h2>
   <h4>{{model.year}}</h4>
   <h6>{{model.mileage}}</h6>
+
+  <div>{{#link-to "update" model}}Update vehicle {{/link-to}}</div>
+
+  <button {{action 'deleteVehicle' model}}> Delete </button>
+
+  <div>{{#link-to "works"}}See vehicle's works{{/link-to}}</div>
+  <div>{{#link-to 'vehicles'}}Back to dashboard{{/link-to}}</div>
 </div>
-
-<button {{action 'deleteVehicle' model}}> Delete </button>
-
-{{#link-to "update" model}}Update vehicle {{/link-to}}
-
-{{#link-to "works"}}See vehicle's works{{/link-to}}
-{{#link-to 'vehicles'}}Back to dashboard{{/link-to}}
