@@ -1,3 +1,5 @@
+<button {{action 'toggleCreateForm'}}> Create New Vehicle </button>
+
 <form {{action 'createVehicle' on='submit'}}>
   {{input placeholder='make' value=vehicle.make}}
   {{input placeholder='model' value=vehicle.model}}
