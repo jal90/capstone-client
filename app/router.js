@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('change-password')
   this.route('users')
   this.route('vehicles')
+  this.route('new', { path: '/vehicles/new' })
   this.route('vehicle', { path: '/vehicles/:vehicle_id' })
   this.route('update', { path: '/vehicles/:vehicle_id/update' })
   this.route('works')

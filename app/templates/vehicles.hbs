@@ -6,12 +6,12 @@
 <div class="text-center">
 <h2>{{vehicle.make}} {{vehicle.model}}</h2>
 <h4>{{vehicle.year}}</h4>
-</div>
 {{#link-to 'vehicle' vehicle}} See vehicle! {{/link-to}}
+</div>
 {{/each}}
 
 <div class="text-center">
 {{#link-to "works"}}See All of your works{{/link-to}}
+{{#link-to "new"}}Create a new vehicle{{/link-to}}
 
-{{new-vehicle createVehicle='createVehicle'}}
 </div>

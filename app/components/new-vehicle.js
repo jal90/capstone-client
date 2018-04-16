@@ -8,16 +8,16 @@ export default Component.extend({
     mileage: ''
   },
 
-  classNameBindings: ['showCreateForm'],
-  showCreateForm: true,
+  // classNameBindings: ['showCreateForm'],
+  // showCreateForm: true,
 
   actions: {
     createVehicle () {
       this.sendAction('createVehicle', this.get('vehicle'))
-    },
-    toggleCreateForm () {
-      console.log('button clicked')
-      this.toggleProperty('showCreateForm')
     }
+    // toggleCreateForm () {
+    //   console.log('button clicked')
+    //   this.toggleProperty('showCreateForm')
+    // }
   }
 })

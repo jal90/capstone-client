@@ -9,12 +9,5 @@ export default Route.extend({
 
   model () {
     return this.get('store').findAll('vehicle')
-  },
-
-  actions: {
-    createVehicle (vehicle) {
-      this.get('store').createRecord('vehicle', vehicle)
-        .save()
-    }
   }
 })
