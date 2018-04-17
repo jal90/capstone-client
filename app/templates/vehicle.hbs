@@ -4,6 +4,14 @@
   <h6>{{model.mileage}}</h6>
   <h6>{{model.id}}</h6>
 
+  {{!-- {{#each model.works as |work|}} --}}
+  {{!-- <div class='text-center'>
+    {{work.name}}<br>
+    {{work.mileage}}<br>
+    {{work.date}}
+  </div>
+  {{/each}} --}}
+
   <div>{{#link-to "update" model}}Update vehicle {{/link-to}}</div>
 
   <button {{action 'deleteVehicle' model}}> Delete </button>
@@ -15,4 +23,5 @@
 {{new-work createWork='createWork'
            vehicle=model}}
 
-{{vehicle-works vehicle=model}}
+{{vehicle-works vehicle=model
+                deleteWork='deleteWork'}}
