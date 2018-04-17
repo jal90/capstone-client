@@ -4,6 +4,6 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   mileage: DS.attr('string'),
   date: DS.attr('string'),
-  vehicleId: DS.attr('string')
-  // vehicle: DS.belongsTo('vehicle')
+  // vehicleId: DS.attr('string')
+  vehicle: DS.belongsTo('vehicle')
 })
