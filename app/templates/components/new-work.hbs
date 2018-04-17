@@ -1,0 +1,8 @@
+<button {{action 'toggleWorkForm'}}> Log new work </button>
+
+<form {{action 'createWork' on='submit'}}>
+  {{input placeholder='Name of work' value=work.name}}
+  {{input placeholder='Date of work' value=work.date}}
+  {{input placeholder='Mileage at time of work' value=work.mileage}}
+  <button type='submit'> Log work </button>
+</form>

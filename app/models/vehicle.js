@@ -5,4 +5,5 @@ export default DS.Model.extend({
   model: DS.attr('string'),
   year: DS.attr('string'),
   mileage: DS.attr('string')
+  // works: DS.hasMany('work')
 })

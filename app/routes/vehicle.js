@@ -10,6 +10,9 @@ export default Route.extend({
       vehicle.destroyRecord()
         .then(() => this.transitionTo('vehicles'))
         .then(() => this.toast.warning('Deleted Vehicle'))
+    },
+    createWork (work) {
+      this.get('store').createRecord('work', work).save()
     }
   }
 })
