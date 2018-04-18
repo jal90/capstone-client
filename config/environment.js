@@ -51,7 +51,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/capstone-client'
     ENV.locationType = 'hash'
-    ENV.apiHost = 'https://jal90-capstone-api.herokuapp.com/'
+    ENV.apiHost = 'https://jal90-capstone-api.herokuapp.com'
   }
 
   return ENV
