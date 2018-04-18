@@ -7,13 +7,17 @@ export default Route.extend({
       vehicle.destroyRecord()
         .then(() => this.transitionTo('vehicles'))
         .then(() => this.toast.warning('Deleted Vehicle'))
+        .catch(() => this.toast.error('Could not delete vehicle'))
     },
     createWork (work) {
-      this.get('store').createRecord('work', work).save()
+      this.get('store').createRecord('work', work)
+        .save()
+        .catch(() => this.toast.error('Could not create work'))
     },
 
     deleteWork (work) {
       work.destroyRecord()
+        .catch(() => this.toast.error('Could not delete work'))
     }
   }
 })

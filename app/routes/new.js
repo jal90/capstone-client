@@ -7,7 +7,7 @@ export default Route.extend({
       // TODO: figure out how to change toast position
         .then(() => this.toast.info('Created Vehicle'))
         .then(() => this.transitionTo('vehicles'))
-        .catch(() => this.toast.error('Did not update vehicle'))
+        .catch(() => this.toast.error('Could not create vehicle'))
     }
   }
 })

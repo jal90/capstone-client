@@ -10,7 +10,7 @@ export default Route.extend({
     signOut () {
       this.get('auth').signOut()
         .then(() => this.get('store').unloadAll())
-        .then(() => this.transitionTo('sign-in'))
+        .then(() => this.transitionTo('application'))
         .then(() => {
           this.get('flashMessages').warning('You have been signed out.')
         })
