@@ -4,7 +4,7 @@ import { inject as service } from '@ember/service'
 export default Route.extend({
 
   auth: service(),
-  flashMessages: service(),
+  // flashMessages: service(),
 
   actions: {
     signOut () {
@@ -12,7 +12,7 @@ export default Route.extend({
         .then(() => this.get('store').unloadAll())
         .then(() => this.transitionTo('application'))
         .then(() => {
-          this.get('flashMessages').warning('You have been signed out.')
+          this.toast.info('You have been signed out.')
         })
         .catch(() => {
           this.get('flashMessages')
