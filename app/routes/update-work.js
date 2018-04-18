@@ -3,16 +3,19 @@ import Route from '@ember/routing/route'
 export default Route.extend({
   // This model hook is being ignored, Ember is choosing the implicit one
   model (params) {
-    const work = this.get('store').findRecord('work', params.work_id)
-    this.set('vehicleId', work.get('vehicle.id'))
-    return work
+    return this.get('store').findRecord('work', params.work_id)
+  },
+
+  work: {
+    // vehicleId: work.vehicle_id
   },
 
   actions: {
     updateWork (work) {
+      console.log('work.data is ', work.data)
       work.save()
         .then(() => this.toast.info('Updated record!'))
-        // .then(() => this.transitionTo('vehicle/' + work.vehicleId))
+        .then(() => this.transitionTo(`/vehicles/${work.vehicle.id}`))
     }
   }
 })

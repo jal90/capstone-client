@@ -1,11 +1,12 @@
 {{!-- {{update-work-form work=model
                    updateWork='updateWork'}} --}}
 
-  <div class="container-fluid">
+  <div class="container-fluid inline">
    <form {{action 'updateWork' model on='submit'}}>
      Name: {{input placeholder='name' value=model.name class=inline}}<br>
      Date: {{input placeholder='date' value=model.date}}<br>
      Mileage: {{input placeholder='mileage' value=model.mileage}}<br>
+     Vehicle ID: {{input placeholder='id' value=model.vehicle.id}}<br>
      <button type='submit'> Update this work </button>
    </form>
    {{#link-to 'vehicle' model.vehicle}}Back to vehicle{{/link-to}}
