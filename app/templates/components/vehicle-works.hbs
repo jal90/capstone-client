@@ -3,7 +3,5 @@
   <h6>on {{work.date}}</h6>
 <h6> at {{work.mileage}} miles</h6>
 <button {{action 'deleteWork' work}}> Delete this work </button>
-<p>{{work.vehicle.id}}</p>
-{{#link-to 'update-work' work}}Update work{{/link-to}}
+{{#link-to 'update-work' work.id}}Update work{{/link-to}}
 {{/each}}
-{{outlet}}
