@@ -16,7 +16,6 @@ export default Component.extend({
       this.set('work.name', '')
       this.set('work.date', '')
       this.set('work.mileage', '')
-      .catch(() => this.toast.error('Could not create work'))
     },
 
     toggleWorkForm () {

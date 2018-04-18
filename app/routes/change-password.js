@@ -31,6 +31,10 @@ export default Route.extend({
         this.get('flashMessages')
         .danger('Your new passwords must match.')
       }
+    },
+
+    reset () {
+      this.transitionTo('vehicles')
     }
   }
 })

@@ -1,9 +1,10 @@
 {{!-- <button {{action 'toggleCreateForm'}}> Create New Vehicle </button> --}}
-
+<div class="container-fluid inline">
 <form {{action 'createVehicle' on='submit'}}>
-  {{input placeholder='make' value=vehicle.make}}
-  {{input placeholder='model' value=vehicle.model}}
-  {{input placeholder='year' value=vehicle.year}}
-  {{input placeholder='mileage' value=vehicle.mileage}}
+  Make: {{input placeholder='make' value=vehicle.make required='true'}}<br>
+  Model: {{input placeholder='model' value=vehicle.model required='true'}}<br>
+  Year: {{input type="number" placeholder='year' value=vehicle.year required='true'}}<br>
+  Mileage: {{input type="number" max="999999" min="0" placeholder='mileage' value=vehicle.mileage}}<br>
   <button type='submit'> Create a new vehicle </button>
 </form>
+</div>

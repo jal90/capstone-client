@@ -1,18 +1,15 @@
 {{my-application currentUser=model
                  signOut="signOut"}}
 
-corosel here
-
-{{!-- When footer was in my-application, it was getting in the way of dynamically rendered templates --}}
-{{!-- If the template got too tall, instead of scrolling, the footer would kill it --}}
-{{!-- It's happy here --}}
-<footer>
-  <div class="row">
-    <div class="col-xs-3 created-by">
-      Created by Jesse Adams-Lukowsky
-    </div>
-    <div class="col-xs-offset-10 webmaster">
-      Contact: <a href="mailto:mezzyjezze@gmail.com">Click to start email</a>
-    </div>
-  </div>
-</footer>
+                 {{!-- When footer was in my-application, it was getting in the way of dynamically rendered templates --}}
+                 {{!-- If the template got too tall, instead of scrolling, the footer would kill it --}}
+                 {{!-- It's happy here --}}
+                 {{!-- Update: it's broken again. Seemingly after creating the index route (though other styling changes have been made) --}}
+                 {{!-- <footer>
+                     <div class="col-xs-3 created-by">
+                       Created by Jesse Adams-Lukowsky
+                     </div>
+                     <div class="webmaster">
+                       Contact: <a href="mailto:mezzyjezze@gmail.com">Click to start email</a>
+                     </div>
+                 </footer> --}}

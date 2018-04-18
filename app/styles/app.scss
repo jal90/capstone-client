@@ -7,11 +7,19 @@ h1 {
 footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  // bottom: 0;
   width: 100%;
+  background-size: cover;
   background-color: black;
   color: white;
+  background-attachment: fixed;
 }
+// position: absolute;
+// left: 0;
+// height: calc(100% - 54px); /*Minus the height of the header*/
+// top: 54px; /*The height of the header*/
+// background-size: cover;
+// background-attachment: fixed;
 
 .inline input {
   // display: inline;
@@ -27,7 +35,8 @@ footer {
 }
 
 .webmaster {
-  // text-align: right;
+  text-align: right;
+  padding-right: 10px;
 }
 
 .header-underline h3 {
