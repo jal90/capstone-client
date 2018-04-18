@@ -1,27 +1,28 @@
-<div>
-  <h2>{{model.make}} {{model.model}}</h2>
-  <h4>{{model.year}}</h4>
-  <h6>{{model.mileage}}</h6>
-  <h6>{{model.id}}</h6>
+<div class=row>
+  <div class="col-xs-6 col-sm-5">
+    <h2>{{model.make}} {{model.model}}</h2>
+    <h4>{{model.year}}</h4>
+    <h6>{{model.mileage}} miles</h6>
 
-  {{!-- {{#each model.works as |work|}} --}}
-  {{!-- <div class='text-center'>
-    {{work.name}}<br>
-    {{work.mileage}}<br>
-    {{work.date}}
-  </div>
-  {{/each}} --}}
+    <div>
+      {{#link-to "update" model}}Update vehicle {{/link-to}}
+    </div>
 
-  <div>{{#link-to "update" model}}Update vehicle {{/link-to}}</div>
+    <button {{action 'deleteVehicle' model}}> Delete </button>
 
-  <button {{action 'deleteVehicle' model}}> Delete </button>
+    <div>
+      {{#link-to 'vehicles'}}Back to dashboard{{/link-to}}
+    </div>
 
-  <div>{{#link-to "works"}}See vehicle's works{{/link-to}}</div>
-  <div>{{#link-to 'vehicles'}}Back to dashboard{{/link-to}}</div>
-</div>
-
-{{new-work createWork='createWork'
+    {{new-work createWork='createWork'
            vehicle=model}}
+  </div>
 
-{{vehicle-works vehicle=model
-                deleteWork='deleteWork'}}
+  <div class="col-xs-7">
+    <h2>Vehicle Maintenance</h2>
+    {{vehicle-works vehicle=model
+                  deleteWork='deleteWork'}}
+
+  </div>
+
+</div>
