@@ -11,7 +11,7 @@ export default Route.extend({
   actions: {
     updateWork (work) {
       work.save()
-      console.log('vehicleId is ', work.vehicleId)
+        .then(() => this.toast.info('Updated record!'))
         // .then(() => this.transitionTo('vehicle/' + work.vehicleId))
     }
   }

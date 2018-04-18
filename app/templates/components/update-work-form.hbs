@@ -1,9 +1,9 @@
-<form {{action 'updateWork' work on='submit'}}>
+{{!-- Form is being rendered in route instead of here --}}
+
+{{!-- <form {{action 'updateWork' work on='submit'}}>
   Name: {{input placeholder='name' value=work.name class=inline}}<br>
   Date: {{input placeholder='date' value=work.date}}<br>
   Mileage: {{input placeholder='mileage' value=work.mileage}}<br>
-  Id: {{input placeholder='ID' value=work.vehicle.id}}<br>
-  <p> {{work.vehicle.id}}</p>
   <button type='submit'> Update this work </button>
 </form>
-{{#link-to 'vehicle' work.vehicle}}Back to vehicle{{/link-to}}
+{{#link-to 'vehicle' work.vehicle}}Back to vehicle{{/link-to}} --}}
