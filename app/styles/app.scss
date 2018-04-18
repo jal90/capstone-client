@@ -29,3 +29,15 @@ footer {
 .webmaster {
   // text-align: right;
 }
+
+.header-underline h3 {
+  text-decoration: underline;
+  margin: 3px;
+  padding: 3px;
+}
+
+.section-outline {
+  border: solid black 1px;
+  margin: 3px;
+  padding: 3px;
+}

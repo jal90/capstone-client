@@ -1,28 +1,29 @@
-<div class=row>
-  <div class="col-xs-6 col-sm-5">
-    <h2>{{model.make}} {{model.model}}</h2>
-    <h4>{{model.year}}</h4>
-    <h6>{{model.mileage}} miles</h6>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-7 col-xs-offset-1 col-sm-4">
+      <h2>{{model.make}} {{model.model}}</h2>
+      <h4>{{model.year}}</h4>
+      <h6>{{model.mileage}} miles</h6>
 
-    <div>
-      {{#link-to "update" model}}Update vehicle {{/link-to}}
+      <div>
+        {{#link-to "update" model}}Update vehicle {{/link-to}}
+      </div>
+
+      <button {{action 'deleteVehicle' model}}> Delete Vehicle</button>
+
+      <div>
+        {{#link-to 'vehicles'}}Back to dashboard{{/link-to}}
+      </div>
+
+      {{new-work createWork='createWork'
+             vehicle=model}}
     </div>
 
-    <button {{action 'deleteVehicle' model}}> Delete </button>
-
-    <div>
-      {{#link-to 'vehicles'}}Back to dashboard{{/link-to}}
+    <div class="col-xs-6">
+      <h2>Maintenance History</h2>
+      {{vehicle-works vehicle=model
+                    deleteWork='deleteWork'}}
     </div>
 
-    {{new-work createWork='createWork'
-           vehicle=model}}
   </div>
-
-  <div class="col-xs-7">
-    <h2>Vehicle Maintenance</h2>
-    {{vehicle-works vehicle=model
-                  deleteWork='deleteWork'}}
-
-  </div>
-
 </div>
