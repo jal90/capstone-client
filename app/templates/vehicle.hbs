@@ -1,27 +1,29 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-7 col-xs-offset-1 col-sm-4">
-      <h2>{{model.make}} {{model.model}}</h2>
-      <h4>{{model.year}}</h4>
-      <h6>{{model.mileage}} miles</h6>
+      <h2>{{model.vehicle.make}} {{model.vehicle.model}}</h2>
+      <h4>{{model.vehicle.year}}</h4>
+      <h6>{{format-mileage model.vehicle.mileage}} miles</h6>
 
       <div>
-        {{#link-to "update" model}}Update vehicle {{/link-to}}
+        {{#link-to "update" model.vehicle}}Update vehicle {{/link-to}}
+        <button {{action 'deleteVehicle' model.vehicle}}> Delete Vehicle</button>
       </div>
 
-      <button {{action 'deleteVehicle' model}}> Delete Vehicle</button>
 
-      <div>
-        {{#link-to 'vehicles'}}Back to dashboard{{/link-to}}
+
+      <div style="margin-top: 20px;">
+        {{#link-to 'vehicles' class="links" }}Back to dashboard{{/link-to}}
       </div>
 
-      {{new-work createWork='createWork'
-             vehicle=model}}
+      <div style="margin-top: 20px;">
+        {{new-work createWork='createWork'
+             vehicle=model.vehicle}}
+      </div>
     </div>
 
     <div class="col-xs-6">
-      <h2>Maintenance History</h2>
-      {{vehicle-works vehicle=model
+      <h2>Maintenance History</h2> {{vehicle-works vehicle=model.vehicle
                     deleteWork='deleteWork'}}
     </div>
 
