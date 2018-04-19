@@ -14,12 +14,6 @@ footer {
   color: white;
   background-attachment: fixed;
 }
-// position: absolute;
-// left: 0;
-// height: calc(100% - 54px); /*Minus the height of the header*/
-// top: 54px; /*The height of the header*/
-// background-size: cover;
-// background-attachment: fixed;
 
 .inline input {
   // display: inline;
@@ -28,6 +22,16 @@ footer {
 
 .hide-work-form form {
   display: none;
+}
+
+.links {
+  margin-top: 50px;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+.link {
+  color: black;
 }
 
 .created-by {
@@ -49,4 +53,8 @@ footer {
   border: solid black 1px;
   margin: 3px;
   padding: 3px;
+}
+
+.vehicles {
+  margin: 30px;
 }

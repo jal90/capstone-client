@@ -1,21 +1,28 @@
-<h1> My vehicles </h1>{{!-- <h1> Click on vehicle below to inspect </h1> --}}
+<h1> My vehicles </h1>
 
-{{#each model as |vehicle|}}
-  {{#link-to 'vehicle' vehicle}}
+{{!-- Links to works and sections --}}
+<div class="row">
+  <div class="col-md-4">
     <div class="text-center">
-      <h2>{{vehicle.make}} {{vehicle.model}}</h2>
-      <h4>{{vehicle.year}}</h4>
+      <div class="links">
+        {{#link-to "new" class="link"}}Create a new vehicle{{/link-to}}
+      </div>
+      <div class="links">
+        {{#link-to "works" class="link"}}See All of your works{{/link-to}}
+      </div>
     </div>
-  {{/link-to}}
-
-{{/each}}
-
-<div class="text-center">
-  <div>
-    {{#link-to "works"}}See All of your works{{/link-to}}
   </div>
-  <div>
-    {{#link-to "new"}}Create a new vehicle{{/link-to}}
+
+{{!-- Links to individual vehicles --}}
+  <div class="col-md-4">
+    {{#each model as |vehicle|}}
+      <div class="text-center vehicles">
+        {{#link-to 'vehicle' vehicle.id}}
+          <h2>{{vehicle.make}} {{vehicle.model}}</h2>
+          <h4>{{vehicle.year}}</h4>
+        {{/link-to}}
+      </div>
+    {{/each}}
   </div>
 
 </div>

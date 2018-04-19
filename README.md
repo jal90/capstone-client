@@ -1,6 +1,8 @@
 Mechanic Mate
 Wireframes and ERDs: https://imgur.com/a/tCHWP
 
+got regex for mileage helper from https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+
 User stories:
 As a user I want to log in and see my vehicles.  Want to be able to create one
 
