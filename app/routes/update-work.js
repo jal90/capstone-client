@@ -1,6 +1,12 @@
 import Route from '@ember/routing/route'
 
 export default Route.extend({
+  didInsertElement () {
+    this.set('model', {
+
+    })
+  },
+
   actions: {
     updateWork (work) {
       work.save()

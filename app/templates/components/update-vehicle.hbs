@@ -2,7 +2,7 @@
   Make: {{input placeholder='make' value=vehicle.make class=inline}}<br>
   Model: {{input placeholder='model' value=vehicle.model}}<br>
   Year: {{input type="number" placeholder='year' value=vehicle.year}}<br>
-  Mileage: {{input type="number" placeholder='mileage' value=vehicle.mileage}}<br>
+  Mileage: {{input type="number" placeholder='mileage' max="999999" min="0" value=vehicle.mileage}}<br>
   <button type='submit'> Update this vehicle </button>
 </form>
 {{#link-to 'vehicle' vehicle}}Back to vehicle{{/link-to}}
