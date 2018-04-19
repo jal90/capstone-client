@@ -1,8 +1,8 @@
   <div class="container-fluid inline">
    <form {{action 'updateWork' model on='submit'}}>
-     Name: {{input placeholder='name' value=model.name class=inline}}<br>
+     Name: {{input placeholder='name' value=model.name class=inline required='true'}}<br>
      Date: {{input type="date" placeholder='date' value=model.date}}<br>
-     Mileage: {{input type="number" placeholder='mileage' max="999999" min="0" value=model.mileage}}<br>
+     Mileage: {{input type="number" placeholder='mileage' max="999999" min="0" value=model.mileage required='true'}}<br>
      <button type='submit'> Update this work </button>
    </form>
    {{#link-to 'vehicle' model.vehicle}}Back to vehicle{{/link-to}}
