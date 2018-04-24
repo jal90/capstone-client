@@ -1,13 +1,17 @@
-<div class="container-fluid">
+<div class="container-fluid vehicle">
   <div class="row">
-    <div class="col-xs-7 col-xs-offset-1 col-sm-4">
-      <h2>{{model.vehicle.make}} {{model.vehicle.model}}</h2>
-      <h4>{{model.vehicle.year}}</h4>
-      <h6>{{format-mileage model.vehicle.mileage}} miles</h6>
+    <div class="col-xs-7 col-xs-offset-1 col-sm-4 vehicle-info">
+      <div class="border">
+
+      <h4 class="box-title">{{model.vehicle.year}} {{model.vehicle.make}} {{model.vehicle.model}}</h4>
+
+    <div class="box-text">
+      <h5>{{format-mileage model.vehicle.mileage}} miles</h5>
 
       <div>
-        {{#link-to "update" model.vehicle}}Update vehicle {{/link-to}}
-        <button {{action 'deleteVehicle' model.vehicle}}> Delete Vehicle</button>
+        {{#link-to "update" model.vehicle}}Update vehicle {{/link-to}}</div>
+      <div>
+          <button {{action 'deleteVehicle' model.vehicle}}> Delete Vehicle</button>
       </div>
 
 
@@ -16,11 +20,14 @@
         {{#link-to 'vehicles' class="links" }}Back to dashboard{{/link-to}}
       </div>
 
-      <div style="margin-top: 20px;">
-        {{new-work createWork='createWork'
-             vehicle=model.vehicle}}
-      </div>
+
     </div>
+    <div>
+      {{new-work createWork='createWork'
+           vehicle=model.vehicle}}
+    </div>
+  </div>
+</div>
 
     <div class="col-xs-6">
       <h2>Maintenance History</h2> {{vehicle-works vehicle=model.vehicle
