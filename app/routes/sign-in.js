@@ -1,8 +1,17 @@
 import Route from '@ember/routing/route'
 import { inject as service } from '@ember/service'
 import RSVP from 'rsvp'
+import Ember from 'ember'
 
 export default Route.extend({
+  activate () {
+    Ember.$('body').addClass('test')
+  },
+
+  deactivate () {
+    Ember.$('body').removeClass('test')
+  },
+
   auth: service(),
 
   model () {

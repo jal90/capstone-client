@@ -1,8 +1,11 @@
 import Route from '@ember/routing/route'
 import { inject as service } from '@ember/service'
 import RSVP from 'rsvp'
+import Ember from 'ember'
 
 export default Route.extend({
+
+
   auth: service(),
 
   model () {

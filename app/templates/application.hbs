@@ -1,5 +1,8 @@
-{{my-application currentUser=model
-                 signOut="signOut"}}
+{{!-- {{my-application currentUser=model
+                 signOut="signOut"}} --}}
+
+                 {{outlet}}
+
 
                  {{!-- When footer was in my-application, it was getting in the way of dynamically rendered templates --}}
                  {{!-- If the template got too tall, instead of scrolling, the footer would kill it --}}

@@ -1,5 +1,10 @@
 @import "ember-bootstrap/bootstrap";
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 h1 {
   text-align: center;
 }
@@ -25,6 +30,14 @@ footer {
 }
 
 .hide-work-form form {
+  display: none;
+}
+
+.hide-sign-in-form form {
+  display: none;
+}
+
+.hide-sign-up-form form {
   display: none;
 }
 
@@ -99,4 +112,29 @@ h5 {
 
 .vehicles {
   margin: 30px;
+}
+
+.car-pic {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://mail.google.com/mail/u/0/?ui=2&ik=526f4f1bd4&view=fimg&th=162f9523803fddd9&attid=0.2&disp=emb&realattid=ii_jge48sc60_162f951801a81ef5&attbid=ANGjdJ_yM_WClFFGsuR9yjEM0_2lVCGLDbyUA180QtbXonEh9Rfq8e-x-ntQQm5JMHmt-bDP320zGGzKGGuH0KPnPC00LWhrn9NNUr6YgrqejhcEjQmnp7MbYFqA7Xk&sz=w944-h630&ats=1524601637739&rm=162f9523803fddd9&zw&atsh=1');
+  background-size: contain;
+  background-position: -243px 0;
+}
+
+.intro-text {
+  color: white;
+  padding: 17% 0 0 4%;
+  font-size: 1.5em;
+}
+
+.intro-text h1 {
+  text-align: left;
+}
+
+.full {
+  height: 100vh;
+}
+
+.intro-components {
+  background-color: white;
+  height: 100%;
 }
