@@ -1,16 +1,16 @@
-<button {{action 'toggleSignUpForm'}}> Sign Up </button>
+<button style="display: inline;" {{action 'toggleSignUpForm'}}> Sign Up </button>
 
-<form>
+<form id="sign-up-form">
 <div class="container-fluid inline">
 {{email-input email=credentials.email}}
 {{password-input password=credentials.password}}
 {{password-confirmation-input password=credentials.passwordConfirmation}}
 
-<button type="submit" class="btn btn-primary" {{action "submit"}}>
+<button type="submit" class="btn btn-primary" {{action "submitUp"}}>
   Sign Up
 </button>
 
-<button class="btn btn-default" {{action "reset"}}>
+<button class="btn btn-default" {{action "resetUp"}}>
   Cancel
 </button>
 </div>

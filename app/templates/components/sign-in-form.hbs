@@ -1,16 +1,33 @@
-<button {{action 'toggleSignInForm'}}> Sign In </button>
+<button id="sign-up-button" class="btn btn-default" style="color: rgb(255, 192, 0);" {{action 'toggleSignUpForm'}}> Sign Up </button>
+<span style="font-size: 2em; position: 0 50px;"> / </span>
+<button id="sign-in-button" class="btn btn-default" {{action 'toggleSignInForm'}}> Login </button>
 
-<form>
-<div class="container-fluid inline">
-{{email-input email=credentials.email}}
-{{password-input password=credentials.password}}
+<form id="sign-in-form" class="hide-sign-in-form">
+  <div class="container-fluid inline">
+    {{email-input email=credentials.email}} {{password-input password=credentials.password}}
 
-<button type="submit" class="btn btn-primary" {{action "submit"}}>
+    <button type="submit" class="btn btn-primary" {{action "submit"}}>
   Sign In
 </button>
 
-<button class="btn btn-default" {{action "reset"}}>
+    <button class="btn btn-default" {{action "reset"}}>
   Cancel
 </button>
-</div>
+  </div>
+</form>
+
+{{!-- Sign Up Form --}}
+
+<form id="sign-up-form">
+  <div class="container-fluid inline">
+    {{email-input email=credentials.email}} {{password-input password=credentials.password}} {{password-confirmation-input password=credentials.passwordConfirmation}}
+
+    <button type="submit" class="btn btn-primary" {{action "submitUp"}}>
+  Sign Up
+</button>
+
+    <button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>
+  </div>
 </form>

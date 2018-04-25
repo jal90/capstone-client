@@ -4,8 +4,8 @@ export default Component.extend({
   tagName: 'form',
   classNames: ['form-horizontal'],
 
-  classNameBindings: ['hideSignUpForm'],
-  hideSignUpForm: false,
+  // classNameBindings: ['hideSignUpForm'],
+  // hideSignUpForm: false,
 
   actions: {
     submit () {
@@ -17,7 +17,10 @@ export default Component.extend({
     },
 
     toggleSignUpForm () {
-      this.toggleProperty('hideSignUpForm')
+      this.sendAction('toggleSignUpForm', this)
+    },
+    toggleSignInForm () {
+      this.sendAction('toggleSignInForm', this)
     }
   }
 })

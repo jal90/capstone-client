@@ -33,13 +33,13 @@ footer {
   display: none;
 }
 
-.hide-sign-in-form form {
+.hide-sign-in-form {
   display: none;
 }
 
-.hide-sign-up-form form {
-  display: none;
-}
+// .hide-sign-up-form form {
+//   display: none;
+// }
 
 h5 {
   font-size: 1.1em;
@@ -137,4 +137,17 @@ h5 {
 .intro-components {
   background-color: white;
   height: 100%;
+  padding: 75px;
+}
+
+.btn-default {
+  font-size: 2em;
+  border: none;
+  padding-top: 0;
+  margin-top: -10px;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+  background-color: white;
+  border: white;
 }

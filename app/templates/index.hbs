@@ -13,8 +13,7 @@
       <p>An app to help you keep <br> track of maintenance on <br> your vehicles</p>
     </div>
     <div class="col-md-6 intro-components">
-      {{sign-up-form submit="signUp" reset="reset" credentials=model}}
-      {{sign-in-form submit="signIn" reset="reset" credentials=model}}
+      {{sign-in-form toggleSignUpForm="toggleSignUpForm" toggleSignInForm="toggleSignInForm" submit="signIn" submitUp="signUp" credentials=model}}
     </div>
   </div>
 </div>

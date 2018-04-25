@@ -1,15 +1,19 @@
 import Component from '@ember/component'
+import Ember from 'ember'
 
 export default Component.extend({
   tagName: 'form',
   classNames: ['form-horizontal'],
 
-  classNameBindings: ['hideSignInForm'],
-  hideSignInForm: false,
+  // classNameBindings: ['hideSignInForm'],
+  // hideSignInForm: true,
 
   actions: {
     submit () {
       this.sendAction('submit', this.get('credentials'))
+    },
+    submitUp () {
+      this.sendAction('submitUp', this.get('credentials'))
     },
 
     reset () {
@@ -17,7 +21,10 @@ export default Component.extend({
     },
 
     toggleSignInForm () {
-      this.toggleProperty('hideSignInForm')
+      this.sendAction('toggleSignInForm', this)
+    },
+    toggleSignUpForm () {
+      this.sendAction('toggleSignUpForm', this)
     }
   }
 })
