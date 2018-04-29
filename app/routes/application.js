@@ -6,18 +6,18 @@ export default Route.extend({
   // flashMessages: service(),
 
   actions: {
-    signOut () {
-      this.get('auth').signOut()
-        .then(() => this.get('store').unloadAll())
-        .then(() => this.transitionTo('application'))
-        .then(() => {
-          this.toast.info('You have been signed out.')
-        })
-        .catch(() => {
-          this.get('flashMessages')
-          .danger('There was a problem. Are you sure you\'re signed-in?')
-        })
-    },
+    // signOut () {
+    //   this.get('auth').signOut()
+    //     .then(() => this.get('store').unloadAll())
+    //     .then(() => this.transitionTo('application'))
+    //     .then(() => {
+    //       this.toast.info('You have been signed out.')
+    //     })
+    //     .catch(() => {
+    //       this.get('flashMessages')
+    //       .danger('There was a problem. Are you sure you\'re signed-in?')
+    //     })
+    // },
 
     error (reason) {
       console.error(reason)
@@ -27,12 +27,10 @@ export default Route.extend({
       )
 
       if (unauthorized) {
-        this.get('flashMessages')
-          .danger('You must be authenticated to access this page.')
-        this.transitionTo('/sign-in')
+        this.transitionTo('index')
       } else {
-        this.get('flashMessages')
-          .danger('There was a problem. Please try again.')
+        this.toast
+          .error('There was a problem. Please try again.')
       }
 
       return false

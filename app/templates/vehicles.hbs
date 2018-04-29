@@ -1,3 +1,5 @@
+{{my-application signOut="signOut"}}
+
 <h1> My vehicles </h1>
 
 {{!-- Links to works and sections --}}
@@ -12,6 +14,7 @@
         <h5 class="box-title">See All of your works</h5>
         <div class="box-text">{{#link-to "works" class="link"}}Click here to see the maintenance records for all of your vehicles{{/link-to}}</div>
       </div>
+      <button class="nava">{{#link-to "change-password"}}Change Password{{/link-to}}</button>
     </div>
   </div>
 
@@ -26,5 +29,4 @@
       </div>
     {{/each}}
   </div>
-
 </div>

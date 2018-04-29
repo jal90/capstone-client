@@ -14,7 +14,7 @@ export default Route.extend({
       if (passwords.next === passwords.confirmNext) {
         this.get('auth').changePassword(passwords)
         .then(() => this.get('auth').signOut())
-        .then(() => this.transitionTo('sign-in'))
+        .then(() => this.transitionTo('index'))
         .then(() => {
           this.toast.success('Successfully changed your password!')
         })

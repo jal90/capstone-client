@@ -120,6 +120,12 @@ h5 {
   background-position: -243px 0;
 }
 
+.nav-car-pic {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://mail.google.com/mail/u/0/?ui=2&ik=526f4f1bd4&view=fimg&th=162f9523803fddd9&attid=0.2&disp=emb&realattid=ii_jge48sc60_162f951801a81ef5&attbid=ANGjdJ_yM_WClFFGsuR9yjEM0_2lVCGLDbyUA180QtbXonEh9Rfq8e-x-ntQQm5JMHmt-bDP320zGGzKGGuH0KPnPC00LWhrn9NNUr6YgrqejhcEjQmnp7MbYFqA7Xk&sz=w944-h630&ats=1524601637739&rm=162f9523803fddd9&zw&atsh=1');
+  background-size: cover;
+  background-position: 0 -243px;
+}
+
 .intro-text {
   color: white;
   padding: 17% 0 0 4%;
@@ -151,3 +157,46 @@ h5 {
   background-color: white;
   border: white;
 }
+
+.header-mm {
+  padding-top: 2%;
+  color: white;
+  margin: auto;
+  display: inline-block;
+}
+
+.header-db {
+  padding-left: 5%;
+}
+
+.nava {
+  background-color: #FFC000;
+  color: white;
+  // padding: 7px;
+  border: none;
+  margin: 3%;
+}
+
+// .navbar-right {
+//   width: 20%;
+// }
+//
+// nav a:link {
+//   background-color: yellow;
+// }
+//
+// nav a:visited {
+//   background-color: yellow;
+// }
+//
+// nav a:focus {
+//   background-color: yellow;
+// }
+//
+// nav a:hover {
+//   background-color: green;
+// }
+//
+// nav a:active {
+//   background-color: yellow;
+// }
