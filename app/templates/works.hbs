@@ -1,9 +1,11 @@
 <div class="container-fluid">
 {{#each model as |work|}}
     <h4> {{work.name}}</h4>
-    <h6>vehicle: {{work.vehicle.make}} {{work.vehicle.model}}</h6>
-    <h6>on: {{work.date}}</h6>
-    <h6> at: {{format-mileage work.mileage}} miles</h6>
+    <h6>{{work.vehicle.make}} {{work.vehicle.model}}</h6>
+    <h6>{{work.date}}</h6>
+    <h6>{{format-mileage work.mileage}} miles</h6>
 
 {{/each}}
 </div>
+
+{{#link-to 'vehicles' class="links" }}Back to dashboard{{/link-to}}

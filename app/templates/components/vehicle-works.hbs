@@ -9,22 +9,27 @@
     <h3>Mileage</h3>
   </div>
 </div>
+
 {{#each vehicle.works as |work|}}
-<div class="section-outline">
-  <div class="row">
-    <div class="col-xs-4">
-      <h4>{{work.name}}</h4>
+  <div class="section-outline">
+    <div class="row">
+      <div class="col-xs-4">
+        <h4>{{work.name}}</h4>
+      </div>
+      <div class="col-xs-4">
+        <h4>{{moment-format work.date 'MM-DD-YYYY' allow-empty=true}}</h4>
+      </div>
+      <div class="col-xs-4">
+        <h4>{{format-mileage work.mileage}} miles</h4>
+      </div>
     </div>
-    <div class="col-xs-4">
-      <h4>{{moment-format work.date 'MM-DD-YYYY' allow-empty=true}}</h4>
+    <div class="row" style="margin: 5px;">
+      <div class="col-md-8" style="padding-left: 0;">
+        {{#link-to 'update-work' work}}Update this work{{/link-to}}
     </div>
-    <div class="col-xs-4">
-      <h4>{{format-mileage work.mileage}} miles</h4>
+    <div class="col-md-4">
+      <button {{action 'deleteWork' work}}> Delete this work </button>
+    </div>
     </div>
   </div>
-  <div style="margin: 5px;">
-    <button {{action 'deleteWork' work}}> Delete this work </button>
-    {{#link-to 'update-work' work}}Update this work{{/link-to}}
-  </div>
-</div>
 {{/each}}

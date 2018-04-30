@@ -5,5 +5,5 @@
      Mileage: {{input type="number" placeholder='mileage' max="999999" min="0" value=model.mileage required='true'}}<br>
      <button type='submit'> Update this work </button>
    </form>
-   {{#link-to 'vehicle' model.vehicle}}Back to vehicle{{/link-to}}
+   {{#link-to 'vehicle' model.vehicle.id}}Back to vehicle{{/link-to}}
   </div>
