@@ -1,8 +1,8 @@
 @import "ember-bootstrap/bootstrap";
 
 html {
-  height: 100%;
-  width: 100%;
+  // height: 100%;
+  // width: 101%;
 }
 
 h1 {
@@ -47,7 +47,7 @@ h5 {
 
 .box-title {
   margin: -0.8em 1px;
-  background: white;
+  background: #CFE6F5;
   width: 40%;
   margin-left: 10%;
   text-align: center;
@@ -68,7 +68,7 @@ h5 {
 
 .links {
   margin-top: 50px;
-  margin-left: 10%;
+  // margin-left: 10%;
   border: 1px solid black;
   border-radius: 3px;
   // text-decoration: underline;
@@ -126,6 +126,42 @@ h5 {
   background-position: 0 -243px;
 }
 
+.vehicles-pic {
+  // margin: 300px;
+  background-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c2e086325efab49ac1c075b97afc495b&auto=format&fit=crop&w=1608&q=80");
+  background-size: auto;
+  background-position: 0 -243px;
+}
+
+.user-views {
+  margin-right: 20px;
+  margin-top: 6%;
+  padding: 5%;
+  border-radius: 7%;
+  background-color: #CFE6F5;
+}
+
+.vehicles-list {
+  background-color: #EEF0F6;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.push-down {
+  margin-top: 75px;
+}
+
+.my-vehicles {
+  color: white;
+  text-align: right;
+  margin-right: 50px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
 .intro-text {
   color: white;
   padding: 17% 0 0 4%;
@@ -172,31 +208,7 @@ h5 {
 .nava {
   background-color: #FFC000;
   color: white;
-  // padding: 7px;
   border: none;
+  border-radius: 5px;
   margin: 3%;
 }
-
-// .navbar-right {
-//   width: 20%;
-// }
-//
-// nav a:link {
-//   background-color: yellow;
-// }
-//
-// nav a:visited {
-//   background-color: yellow;
-// }
-//
-// nav a:focus {
-//   background-color: yellow;
-// }
-//
-// nav a:hover {
-//   background-color: green;
-// }
-//
-// nav a:active {
-//   background-color: yellow;
-// }

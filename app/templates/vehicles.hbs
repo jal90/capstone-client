@@ -1,25 +1,13 @@
 {{my-application signOut="signOut"}}
 
-<h1> My vehicles </h1>
-
 {{!-- Links to works and sections --}}
-<div class="row">
+<div class="row push-down">
   <div class="col-md-4">
-    <div class="text-center">
-      <div class="links">
-        <h5 class="box-title">Create a new vehicle</h5>
-        <div class="box-text">{{#link-to "new" class="link"}}Click here to tell Mechanic Mate about a vehicle you want to create records for{{/link-to}}</div>
-      </div>
-      <div class="links">
-        <h5 class="box-title">See All of your works</h5>
-        <div class="box-text">{{#link-to "works" class="link"}}Click here to see the maintenance records for all of your vehicles{{/link-to}}</div>
-      </div>
-      <button class="nava">{{#link-to "change-password"}}Change Password{{/link-to}}</button>
-    </div>
+    <h1 class="my-vehicles"> My vehicles: </h1>
   </div>
 
 {{!-- Links to individual vehicles --}}
-  <div class="col-md-4">
+  <div class="col-md-4 vehicles-list">
     {{#each model as |vehicle|}}
       <div class="text-center vehicles">
         {{#link-to 'vehicle' vehicle.id}}
@@ -28,5 +16,19 @@
         {{/link-to}}
       </div>
     {{/each}}
+  </div>
+
+  <div class="col-md-4">
+    <div class="text-center user-views">
+      <div class="links">
+        <h5 class="box-title">Create a new vehicle</h5>
+        <div class="box-text">{{#link-to "new" class="link"}}Click here to tell Mechanic Mate about a vehicle you want to create records for{{/link-to}}</div>
+      </div>
+      <div class="links">
+        <h5 class="box-title">See all of your works</h5>
+        <div class="box-text">{{#link-to "works" class="link"}}Click here to see the maintenance records for all of your vehicles{{/link-to}}</div>
+      </div>
+      <button class="nava">{{#link-to "change-password"}}Change Password{{/link-to}}</button>
+    </div>
   </div>
 </div>

@@ -1,7 +1,16 @@
 import Route from '@ember/routing/route'
 import { inject as service } from '@ember/service'
+import Ember from 'ember'
 
 export default Route.extend({
+  activate () {
+    Ember.$('body').addClass('vehicles-pic')
+  },
+
+  deactivate () {
+    Ember.$('body').removeClass('vehicles-pic')
+  },
+
   auth: service(),
 
   vehicle: {
