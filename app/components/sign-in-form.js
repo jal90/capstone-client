@@ -5,9 +5,6 @@ export default Component.extend({
   tagName: 'form',
   classNames: ['form-horizontal'],
 
-  // classNameBindings: ['hideSignInForm'],
-  // hideSignInForm: true,
-
   actions: {
     submit () {
       this.sendAction('submit', this.get('credentials'))

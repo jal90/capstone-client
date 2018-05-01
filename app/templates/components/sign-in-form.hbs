@@ -1,18 +1,16 @@
-<button id="sign-up-button" class="btn btn-default" style="color: rgb(255, 192, 0);" {{action 'toggleSignUpForm'}}> Sign Up </button>
+<button id="sign-up-button" class="btn btn-default" style="color: rgb(255, 192, 0); margin-left: -15px; font-weight: bold;" {{action 'toggleSignUpForm'}}> Sign Up </button>
 <span style="font-size: 2em; position: 0 50px;"> / </span>
 <button id="sign-in-button" class="btn btn-default" {{action 'toggleSignInForm'}}> Login </button>
+
+<p class="instruction-text">Log in and create your vehicle with some basic information, then create maintenance records for that vehicle!</p>
 
 <form id="sign-in-form" class="hide-sign-in-form">
   <div class="container-fluid inline">
     {{email-input email=credentials.email}} {{password-input password=credentials.password}}
-
-    <button type="submit" class="btn btn-primary" {{action "submit"}}>
+    <button type="submit" class="btn btn-warning" {{action "submit"}}>
   Sign In
 </button>
 
-    <button class="btn btn-default" {{action "reset"}}>
-  Cancel
-</button>
   </div>
 </form>
 
@@ -21,13 +19,9 @@
 <form id="sign-up-form">
   <div class="container-fluid inline">
     {{email-input email=credentials.email}} {{password-input password=credentials.password}} {{password-confirmation-input password=credentials.passwordConfirmation}}
-
-    <button type="submit" class="btn btn-primary" {{action "submitUp"}}>
+    <button type="submit" class="btn btn-warning" {{action "submitUp"}}>
   Sign Up
 </button>
 
-    <button class="btn btn-default" {{action "reset"}}>
-  Cancel
-</button>
   </div>
 </form>

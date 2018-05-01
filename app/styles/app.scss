@@ -13,7 +13,14 @@ h5 {
 }
 
 .inline input {
+  border: none;
+  border-bottom: solid gray 2px;
+  border-radius: 0;
+  box-shadow: none;
   max-width: 40%;
+  margin: 3% 0;
+  letter-spacing: 1px;
+  font-size: 1.4em;
 }
 
 .hide-work-form form {
@@ -144,6 +151,12 @@ h5 {
   text-align: left;
 }
 
+.instruction-text {
+  text-align: justify;
+  max-width: 46%;
+  padding: 3% 0;
+}
+
 .full {
   height: 100vh;
 }
@@ -159,11 +172,19 @@ h5 {
   border: none;
   padding-top: 0;
   margin-top: -10px;
+  outline: none;
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
   background-color: white;
   border: white;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-warning {
+  margin-left: -15px;
+  font-size: 1.5em;
 }
 
 .header-mm {
@@ -184,5 +205,3 @@ h5 {
   margin: 0;
   padding: 0;
 }
-
-@import "ember-bootstrap/bootstrap";

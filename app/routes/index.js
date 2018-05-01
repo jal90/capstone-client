@@ -47,12 +47,16 @@ export default Route.extend({
       Ember.$('#sign-in-form').css('display', 'inline')
       Ember.$('#sign-up-form').css('display', 'none')
       Ember.$('#sign-in-button').css('color', 'rgb(255, 192, 0')
+      Ember.$('#sign-in-button').css('font-weight', 'bold')
+      Ember.$('#sign-up-button').css('font-weight', 'normal')
       Ember.$('#sign-up-button').css('color', 'black')
     },
     toggleSignUpForm (form) {
       Ember.$('#sign-up-form').css('display', 'inline')
       Ember.$('#sign-in-form').css('display', 'none')
       Ember.$('#sign-up-button').css('color', 'rgb(255, 192, 0')
+      Ember.$('#sign-up-button').css('font-weight', 'bold')
+      Ember.$('#sign-in-button').css('font-weight', 'normal')
       Ember.$('#sign-in-button').css('color', 'black')
     }
   }
