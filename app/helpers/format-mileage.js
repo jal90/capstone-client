@@ -6,8 +6,10 @@ export function formatMileage (params/*, hash */) {
   const mileageWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   }
-  if (mileage !== undefined) {
-    return mileageWithCommas(mileage)
+  if (mileage !== null && mileage !== undefined) {
+    return mileageWithCommas(mileage) + ' miles'
+  } else {
+    return 'N/A'
   }
 }
 

@@ -6,7 +6,7 @@
 
       <div class="border">
         <h4 class="box-title" style="background-color: white;">{{model.vehicle.year}} {{model.vehicle.make}} {{model.vehicle.model}}</h4>
-        <h5 style="margin: 25px 0 0 100px;">{{format-mileage model.vehicle.mileage}} miles</h5>
+        <h5 style="margin: 25px 0 0 100px;">{{format-mileage model.vehicle.mileage}}</h5>
 
         <div class="box-text">
           <button class="btn-warning" style="font-size: 1em;"> {{#link-to "update" model.vehicle}}Update vehicle {{/link-to}}</button>
