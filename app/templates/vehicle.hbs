@@ -16,18 +16,13 @@
           </div>
 
           <div class="col-md-6">
-            <button {{action 'deleteVehicle' model.vehicle}}> Delete Vehicle</button>
+            <button {{action "deleteVehicle" model.vehicle}}> Delete Vehicle</button>
           </div>
         </div>
 
           <div style="margin-top: 20px;">
             {{#link-to 'vehicles' class="links" }}Back to dashboard{{/link-to}}
           </div>
-
-
-
-
-
 
         <div>
           {{new-work createWork='createWork'
