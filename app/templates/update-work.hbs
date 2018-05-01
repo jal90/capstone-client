@@ -8,6 +8,8 @@
     <br>
     {{input type="number" placeholder='Mileage' max="999999" min="0" value=model.mileage required='true'}}
     <br>
+    {{input style="margin-left: 0;" type="number" step="0.01" placeholder='Price' max="9999" min="0" value=model.price}}
+    <br>
     <button type='submit' class="btn btn-warning" style="margin-left: 30%;"> Update this work </button>
     <button class="btn btn-default" style="margin-top: 10px; margin-left: 10px;">  {{#link-to 'vehicle' model.vehicle.id}}Back to vehicle{{/link-to}}</button>
   </form>

@@ -1,35 +1,39 @@
 <div class="row header-underline">
-  <div class="col-xs-4">
+  <div class="col-xs-3">
     <h3>Work</h3>
   </div>
-  <div class="col-xs-4">
+  <div class="col-xs-3">
     <h3>Date</h3>
   </div>
-  <div class="col-xs-4">
+  <div class="col-xs-3">
     <h3>Mileage</h3>
+  </div>
+  <div class="col-xs-3">
+    <h3>Price</h3>
   </div>
 </div>
 
 {{#each vehicle.works as |work|}}
   <div class="section-outline">
     <div class="row">
-      <div class="col-xs-4">
+      <div class="col-xs-3">
         <h4>{{work.name}}</h4>
       </div>
-      <div class="col-xs-4">
+      <div class="col-xs-3">
         <h4>{{moment-format work.date 'MM-DD-YYYY' allow-empty=true}}</h4>
       </div>
-      <div class="col-xs-4">
+      <div class="col-xs-3">
         <h4>{{format-mileage work.mileage}} miles</h4>
       </div>
+      <div class="col-xs-1">
+        <h4 style="margin-left: 10px;">{{format-price work.price}}</h4>
+      </div>
+      <div class="col-xs-2">
+        <button class="btn-warning work-button">{{#link-to 'update-work' work}}Update this work{{/link-to}}</button>
+        <button class="btn-danger" {{action 'deleteWork' work}}> Delete this work </button>
+
+      </div>
     </div>
-    <div class="row" style="margin: 5px;">
-      <div class="col-md-8" style="padding-left: 0;">
-        {{#link-to 'update-work' work}}Update this work{{/link-to}}
-    </div>
-    <div class="col-md-4">
-      <button {{action 'deleteWork' work}}> Delete this work </button>
-    </div>
-    </div>
+
   </div>
 {{/each}}

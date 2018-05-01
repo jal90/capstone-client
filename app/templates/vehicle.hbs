@@ -4,38 +4,29 @@
   <div class="row">
     <div class="col-xs-7 col-xs-offset-1 col-sm-4 vehicle-info">
 
-
-
       <div class="border">
         <h4 class="box-title" style="background-color: white;">{{model.vehicle.year}} {{model.vehicle.make}} {{model.vehicle.model}}</h4>
         <h5 style="margin: 25px 0 0 100px;">{{format-mileage model.vehicle.mileage}} miles</h5>
 
-        <div class="box-text row">
-          <div class="col-md-6">
-            <div>
-              <button class="btn-warning" style="font-size: 1em;"> {{#link-to "update" model.vehicle}}Update vehicle {{/link-to}}</button>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <button class="btn-danger" {{action "deleteVehicle" model.vehicle}}> Delete Vehicle</button>
-          </div>
+        <div class="box-text">
+          <button class="btn-warning" style="font-size: 1em;"> {{#link-to "update" model.vehicle}}Update vehicle {{/link-to}}</button>
+          <button class="btn-danger" {{action "deleteVehicle" model.vehicle}}> Delete Vehicle</button>
         </div>
+
         <div>
           {{new-work createWork='createWork'
            vehicle=model.vehicle}}
         </div>
       </div>
 
-
       <div style="margin-top: 20px;">
         <button class="btn-default" style="margin: 5% 0 0 -10px;">{{#link-to 'vehicles'}}Back to dashboard{{/link-to}}</button>
       </div>
-
     </div>
 
-    <div class="col-xs-6">
-      <h2>Maintenance History</h2> {{vehicle-works vehicle=model.vehicle
+    <div class="col-xs-6" style="width: 60%;">
+      <h2>Maintenance History</h2>
+      {{vehicle-works vehicle=model.vehicle
                     deleteWork='deleteWork'}}
     </div>
 

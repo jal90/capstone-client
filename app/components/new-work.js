@@ -16,6 +16,7 @@ export default Component.extend({
       this.set('work.name', '')
       this.set('work.date', '')
       this.set('work.mileage', '')
+      this.set('work.price', '')
     },
 
     toggleWorkForm () {
