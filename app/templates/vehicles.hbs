@@ -8,6 +8,7 @@
 
 {{!-- Links to individual vehicles --}}
   <div class="col-md-4 vehicles-list">
+    <button class="btn btn-warning" style="background-opacity: 1">{{#link-to "new"}}Create a new vehicle{{/link-to}}</button>
     {{#each model as |vehicle|}}
       <div class="text-center vehicles">
         {{#link-to 'vehicle' vehicle.id}}

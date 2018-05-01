@@ -119,7 +119,7 @@ h5 {
 
 .vehicles-pic {
   background-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c2e086325efab49ac1c075b97afc495b&auto=format&fit=crop&w=1608&q=80");
-  background-size: auto;
+  background-size: cover;
   background-position: 0 -243px;
 }
 
@@ -133,12 +133,13 @@ h5 {
 
 .vehicles-list {
   background-color: #EEF0F6;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 10px;
 }
 
 .push-down {
   margin-top: 75px;
+  width: 100%;
 }
 
 .my-vehicles {
