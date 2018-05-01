@@ -1,8 +1,8 @@
-<button {{action 'toggleWorkForm'}}> Log new work </button>
+<button class="btn-primary" {{action 'toggleWorkForm'}}> Log new work... </button>
 
-<form {{action 'createWork' on='submit'}}>
+<form {{action 'createWork' on='submit'}} class="route-forms">
   {{input placeholder='Name of work' value=work.name required='true'}}
   {{input type="date" placeholder='Date of work' value=work.date}}
-  {{input type="number" placeholder='Mileage at time of work' max="999999" min="0" value=work.mileage required='true'}}
-  <button type='submit'> Save </button>
+  {{input type="number" placeholder='Mileage' max="999999" min="0" value=work.mileage required='true'}}
+  <button type='submit' class="btn btn-warning" style="margin-left: 30%;"> Save </button>
 </form>

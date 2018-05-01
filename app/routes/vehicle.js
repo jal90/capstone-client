@@ -17,7 +17,7 @@ export default Route.extend({
 
   actions: {
     deleteVehicle (vehicle) {
-      if (confirm('Are you sure you want to delete this vehicle')) {
+      if (confirm('Are you sure you want to delete this vehicle?')) {
         vehicle.destroyRecord()
           .then(() => this.transitionTo('vehicles'))
           .then(() => this.toast.warning('Deleted Vehicle'))

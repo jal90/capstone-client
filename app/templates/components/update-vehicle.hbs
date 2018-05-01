@@ -1,8 +1,12 @@
 <form {{action 'updateVehicle' vehicle on='submit'}}>
-  Make: {{input placeholder='make' value=vehicle.make class=inline}}<br>
-  Model: {{input placeholder='model' value=vehicle.model}}<br>
-  Year: {{input type="number" placeholder='year' value=vehicle.year}}<br>
-  Mileage: {{input type="number" placeholder='mileage' max="999999" min="0" value=vehicle.mileage required='true'}}<br>
-  <button type='submit'> Update this vehicle </button>
+  {{input placeholder='make' value=vehicle.make class=inline}}
+  <br>
+  {{input placeholder='model' value=vehicle.model}}
+  <br>
+  {{input type="number" placeholder='year' value=vehicle.year}}
+  <br>
+  {{input type="number" placeholder='mileage' max="999999" min="0" value=vehicle.mileage required='true'}}
+  <br>
+  <button type='submit' class="btn btn-warning" style="margin-left: 30%;"> Update this vehicle </button>
+  <button class="btn btn-default" style="margin-top: 10px; margin-left: 10px;"> {{#link-to 'vehicle' vehicle.id}}Back to vehicle{{/link-to}}</button>
 </form>
-{{#link-to 'vehicle' vehicle.id}}Back to vehicle{{/link-to}}

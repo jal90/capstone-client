@@ -23,6 +23,17 @@ h5 {
   font-size: 1.4em;
 }
 
+.route-forms input {
+  border: none;
+  border-bottom: solid gray 2px;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 40%;
+  margin: 1% auto;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+}
+
 .hide-work-form form {
   display: none;
 }
