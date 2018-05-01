@@ -1,10 +1,5 @@
 @import "ember-bootstrap/bootstrap";
 
-html {
-  // height: 100%;
-  // width: 101%;
-}
-
 h1 {
   text-align: center;
 }
@@ -13,19 +8,11 @@ h2 {
   margin-top: 0;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  // bottom: 0;
-  width: 100%;
-  background-size: cover;
-  background-color: black;
-  color: white;
-  background-attachment: fixed;
+h5 {
+  font-size: 1.1em;
 }
 
 .inline input {
-  // display: inline;
   max-width: 40%;
 }
 
@@ -37,23 +24,12 @@ footer {
   display: none;
 }
 
-// .hide-sign-up-form form {
-//   display: none;
-// }
-
-h5 {
-  font-size: 1.1em;
-}
-
 .box-title {
   margin: -0.8em 1px;
   background: #CFE6F5;
   width: 40%;
   margin-left: 10%;
   text-align: center;
-  // display: inline;
-  // width: 12em;
-  // text-align: center;
 }
 
 .border {
@@ -68,19 +44,12 @@ h5 {
 
 .links {
   margin-top: 50px;
-  // margin-left: 10%;
   border: 1px solid black;
   border-radius: 3px;
-  // text-decoration: underline;
-  // font-size: 1.5em;
 }
 
 .link {
   color: black;
-}
-
-.create {
-  padding: 7px;
 }
 
 .created-by {
@@ -131,7 +100,6 @@ h5 {
 }
 
 .vehicles-pic {
-  // margin: 300px;
   background-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c2e086325efab49ac1c075b97afc495b&auto=format&fit=crop&w=1608&q=80");
   background-size: auto;
   background-position: 0 -243px;
@@ -204,40 +172,17 @@ h5 {
   margin: auto;
   display: inline-block;
 }
-
+//
 .header-db {
-  // padding: 55px 5% 0 3%;
-  // margin: 15px 5% 0 3%;
   font-size: 1.3em;
-  color: white;
-}
-
-.navbar-right {
-  width: 50%;
-}
-
-.nava-p {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  background-color: #FFC000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin-top: 3%;
-  display: inline;
 }
 
 .nava {
-  position: absolute;
-  top: 5px;
-  right: 5px;
   background-color: #FFC000;
-  color: white;
   border: none;
   border-radius: 5px;
-  margin-top: 3%;
-  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
 @import "ember-bootstrap/bootstrap";
