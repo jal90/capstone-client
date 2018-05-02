@@ -6,7 +6,8 @@
 
 <form id="sign-in-form" class="hide-sign-in-form">
   <div class="container-fluid inline">
-    {{email-input email=credentials.email}} {{password-input password=credentials.password}}
+    {{email-input email=credentials.email}}
+    {{password-input password=credentials.password}}
     <button type="submit" class="btn btn-warning" {{action "submit"}}>
   Sign In
 </button>
@@ -18,7 +19,8 @@
 
 <form id="sign-up-form">
   <div class="container-fluid inline">
-    {{email-input email=credentials.email}} {{password-input password=credentials.password}} {{password-confirmation-input password=credentials.passwordConfirmation}}
+    {{email-input email=credentials.email}} {{password-input password=credentials.password}}
+    {{password-confirmation-input password=credentials.passwordConfirmation}}
     <button type="submit" class="btn btn-warning" {{action "submitUp"}}>
   Sign Up
 </button>

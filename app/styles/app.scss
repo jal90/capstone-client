@@ -17,7 +17,7 @@ h5 {
   border-bottom: solid gray 2px;
   border-radius: 0;
   box-shadow: none;
-  max-width: 40%;
+  max-width: 55%;
   margin: 3% 0;
   letter-spacing: 1px;
   font-size: 1.4em;
@@ -28,7 +28,7 @@ h5 {
   border-bottom: solid gray 2px;
   border-radius: 0;
   box-shadow: none;
-  max-width: 40%;
+  max-width: 60%;
   margin: 1% auto;
   letter-spacing: 1px;
   font-size: 1.4em;
@@ -119,8 +119,8 @@ h5 {
 
 .vehicles-pic {
   background-image: url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c2e086325efab49ac1c075b97afc495b&auto=format&fit=crop&w=1608&q=80");
-  background-size: cover;
-  background-position: 0 -243px;
+  background-size: auto;
+  background-position: 0 -235px;
 }
 
 .user-views {
@@ -164,7 +164,7 @@ h5 {
 }
 
 .instruction-text {
-  text-align: justify;
+  text-align: left;
   max-width: 46%;
   padding: 3% 0;
 }
