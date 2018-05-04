@@ -6,6 +6,7 @@ import { inject as service } from '@ember/service'
 export default Route.extend({
   activate () {
     Ember.$('body').addClass('car-pic')
+    this.get('store').findAll('work')
   },
 
   deactivate () {
